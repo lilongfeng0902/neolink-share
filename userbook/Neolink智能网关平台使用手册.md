@@ -325,7 +325,6 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \
 b. python编码示例
 
 ```python
-SQL
 import requests
 url = "http://120.133.40.59/api/v1/responses"
 
@@ -375,7 +374,6 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \
 b. python编码示例
 
 ```python
-SQL
 import requests
 url = "http://120.133.40.59/api/v1/responses"
 
@@ -432,7 +430,6 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 b. python编码示例
 
 ```python
-SQL
 import requests
 url = "http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent"
 
@@ -494,7 +491,6 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 b. python编码示例
 
 ```python
-SQL
 import requests
 url = "http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent"
 
