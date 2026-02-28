@@ -188,9 +188,9 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 }
 ]
 }'
+```
 
 注：请求header中默认使用Authorization传递鉴权参数，如：--header 'Authorization: Bearer <API Key>'，如遇到不能识别Authorization参数的情形，可使用x-goog-api-key传递鉴权信息进行处理，如：--header 'x-goog-api-key: <API Key>'。
-```
 
 b. python编码示例
 
@@ -220,9 +220,9 @@ resp = requests.post(url, headers=headers, json=payload, timeout=30)
 resp.raise_for_status()
 data = resp.json()
 print(data )
+```
 
 注：请求header中默认使用Authorization传递鉴权参数，如 "Authorization": "Bearer <API Key>"，如遇到不能识别Authorization参数的情形，可使用x-goog-api-key传递鉴权信息进行处理，将 "Authorization": "Bearer <API Key>"替换为"x-goog-api-key": "<API Key>"。
-```
 
 c. 支持模型Id
 
@@ -700,6 +700,6 @@ if chunk:
 f.write(chunk)
 
 print("视频已保存为 output.mp4")
+```
 
 注：变量video Id是创建视频请求成功后返回的参数
-```
