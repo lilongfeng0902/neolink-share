@@ -50,9 +50,9 @@ Neolink 智能网关平台__是一个面向大模型应用场景的 __统一 AI 
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1/chat/completions' \\
---header 'Content-Type: application/json' \\
---header 'Authorization: Bearer <API Key>' \\
+curl --location --request POST 'http://120.133.40.59/api/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <API Key>' \
 --data-raw '{
 "model": "<Model ID>",
 "messages": [
@@ -112,9 +112,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1/messages' \\
---header 'Content-Type: application/json' \\
---header 'Authorization: Bearer <API Key>' \\
+curl --location --request POST 'http://120.133.40.59/api/v1/messages' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <API Key>' \
 --data-raw '{
 "model": "<Model ID>",
 "messages": [
@@ -174,9 +174,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
---header 'Authorization: Bearer <API Key>' \\
---header 'Content-Type: application/json' \\
+curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Content-Type: application/json' \
 --data-raw '{
 "contents": [
 {
@@ -238,9 +238,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
---header 'Authorization: Bearer <API Key>' \\
---header 'Content-Type: application/json' \\
+curl --location --request POST 'http://120.133.40.59/api/v1/responses' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Content-Type: application/json' \
 --data-raw '{
 "model": "<Model ID>",
 "input": [
@@ -304,9 +304,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
---header 'Authorization: Bearer <API Key>' \\
---header 'Content-Type: application/json' \\
+curl --location --request POST 'http://120.133.40.59/api/v1/responses' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Content-Type: application/json' \
 --data-raw '{
 "model": "<Model ID>",
 "reasoning": {
@@ -363,9 +363,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
---header 'Authorization: Bearer <API Key>' \\
---header 'Content-Type: application/json' \\
+curl --location --request POST 'http://120.133.40.59/api/v1/responses' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Content-Type: application/json' \
 --data-raw '{
 "model": "<Model ID>",
 "input": "今天北京天气怎么样？"
@@ -405,9 +405,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
---header 'Authorization: Bearer <API Key>' \\
---header 'Content-Type: application/json' \\
+curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Content-Type: application/json' \
 --data-raw '{
 "contents": [
 {
@@ -475,9 +475,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
---header 'Authorization: Bearer <API Key>' \\
---header 'Content-Type: application/json' \\
+curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Content-Type: application/json' \
 --data-raw '{
 "contents": [
 {
@@ -529,9 +529,9 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
---header 'Authorization: Bearer <API Key>' \\
---header 'Content-Type: application/json' \\
+curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Content-Type: application/json' \
 --data-raw '{
 "contents": [
 {
@@ -626,11 +626,11 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request POST 'http://120.133.40.59/api/v1/videos' \\
---header 'Authorization: Bearer <API Key>' \\
---form 'model="<Model ID>"' \\
---form 'prompt="A calico cat playing a piano on stage"' \\
---form 'seconds="4"' \\
+curl --location --request POST 'http://120.133.40.59/api/v1/videos' \
+--header 'Authorization: Bearer <API Key>' \
+--form 'model="<Model ID>"' \
+--form 'prompt="A calico cat playing a piano on stage"' \
+--form 'seconds="4"' \
 --form 'size="720x1280"'
 ```
 
@@ -668,8 +668,8 @@ c. 支持模型Id
 a. curl请求示例
 
 ```bash
-curl --location --request GET 'http://120.133.40.59/api/v1/videos/<video Id>/content?video_id=<video Id>' \\
---header 'Authorization: Bearer <API Key>' \\
+curl --location --request GET 'http://120.133.40.59/api/v1/videos/<video Id>/content?video_id=<video Id>' \
+--header 'Authorization: Bearer <API Key>' \
 --output output.mp4
 ```
 
