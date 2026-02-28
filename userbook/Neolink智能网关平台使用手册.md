@@ -2,7 +2,7 @@
 
 ## 1. 概览
 
-__Neolink 智能网关平台__是一个面向大模型应用场景的 __统一 AI 服务转发与管理平台__，主要用于连接与分发多个主流大模型生态，包括 __ChatGPT、Claude、Gemini__ 等。通过 Neolink，开发者可以以统一接口调用不同模型，简化接入成本，提升调用效率，并实现更灵活的模型选择。
+Neolink 智能网关平台__是一个面向大模型应用场景的 __统一 AI 服务转发与管理平台__，主要用于连接与分发多个主流大模型生态，包括 __ChatGPT、Claude、Gemini__ 等。通过 Neolink，开发者可以以统一接口调用不同模型，简化接入成本，提升调用效率，并实现更灵活的模型选择。
 
 - 模型调用Base URL：http://120.133.40.59/api
 - 模型调用API Key：xxxxxxxx
@@ -47,7 +47,7 @@ __Neolink 智能网关平台__是一个面向大模型应用场景的 __统一 A
 
 #### 2.2.1. 创建对话请求（OpenAI）
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1/chat/completions' \\
@@ -64,7 +64,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/chat/completions' \\
 }'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 import requests
@@ -92,7 +92,7 @@ if "choices" in result:
 print("Assistant:", result["choices"][0]["message"]["content"])
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gpt-4.1
 - gpt-5
@@ -109,7 +109,7 @@ print("Assistant:", result["choices"][0]["message"]["content"])
 
 #### 2.2.2. 创建对话请求（Anthropic）
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1/messages' \\
@@ -126,7 +126,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/messages' \\
 }'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 import requests
@@ -162,7 +162,7 @@ print("Assistant reply:")
 print(reply)
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - claude-sonnet-4-5-20250929
 - claude-opus-4-5-20251101
@@ -171,7 +171,7 @@ print(reply)
 
 #### 2.2.3. 创建对话请求（Google）
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
@@ -192,7 +192,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 注：请求header中默认使用Authorization传递鉴权参数，如：--header 'Authorization: Bearer <API Key>'，如遇到不能识别Authorization参数的情形，可使用x-goog-api-key传递鉴权信息进行处理，如：--header 'x-goog-api-key: <API Key>'。
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 import requests
@@ -224,7 +224,7 @@ print(data )
 注：请求header中默认使用Authorization传递鉴权参数，如 "Authorization": "Bearer <API Key>"，如遇到不能识别Authorization参数的情形，可使用x-goog-api-key传递鉴权信息进行处理，将 "Authorization": "Bearer <API Key>"替换为"x-goog-api-key": "<API Key>"。
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gemini-2.5-flash-image
 - gemini-3-pro-image-preview
@@ -235,7 +235,7 @@ print(data )
 
 #### 2.3.1. 创建多模态请求（OpenAI）
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
@@ -258,7 +258,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
 }'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 import requests
@@ -290,7 +290,7 @@ result = response.json()
 print(result)
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gpt-4.1
 - gpt-5
@@ -301,7 +301,7 @@ print(result)
 
 ##### 2.3.2.1. 创建原生模型搜索请求
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
@@ -322,7 +322,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
 }'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 SQL
@@ -353,14 +353,14 @@ result = response.json()
 print(result)
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gpt-5
 - gpt-5.2
 
 ##### 2.3.2.2. 创建默认搜索请求
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
@@ -372,7 +372,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
 }'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 SQL
@@ -394,7 +394,7 @@ result = response.json()
 print(result)
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gpt-5.2-search
 
@@ -402,7 +402,7 @@ print(result)
 
 ##### 2.3.3.1. 创建原生模型搜索请求
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
@@ -429,7 +429,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 }'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 SQL
@@ -466,13 +466,13 @@ result = response.json()
 print(result)
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gemini-3-pro-preview
 
 ##### 2.3.3.2. 创建默认搜索请求
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
@@ -491,7 +491,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 }'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 SQL
@@ -520,13 +520,13 @@ result = response.json()
 print(result)
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gemini-3-pro-preview-search
 
 #### 2.3.4. 创建视频理解请求（Google）
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID>:generateContent' \\
@@ -565,7 +565,7 @@ fi
 base64 $B64FLAGS "$VIDEO_PATH" > base64.txt
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 import requests
@@ -614,7 +614,7 @@ fi
 base64 $B64FLAGS "$VIDEO_PATH" > base64.txt
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - gemini-3-pro-preview
 - gemini-3-flash-preview
@@ -623,7 +623,7 @@ base64 $B64FLAGS "$VIDEO_PATH" > base64.txt
 
 ##### 2.3.5.1. 创建视频请求（OpenAI）
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request POST 'http://120.133.40.59/api/v1/videos' \\
@@ -634,7 +634,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/videos' \\
 --form 'size="720x1280"'
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 import requests
@@ -658,14 +658,14 @@ print(response.status_code)
 print(response.text)
 ```
 
-支持模型Id
+c. 支持模型Id
 
 - sora-2-guan
 - sora-2-pro-guan
 
 ##### 2.3.5.2. 获取视频内容请求（OpenAI）
 
-1. curl请求示例
+a. curl请求示例
 
 ```bash
 curl --location --request GET 'http://120.133.40.59/api/v1/videos/<video Id>/content?video_id=<video Id>' \\
@@ -673,7 +673,7 @@ curl --location --request GET 'http://120.133.40.59/api/v1/videos/<video Id>/con
 --output output.mp4
 ```
 
-2. python编码示例
+b. python编码示例
 
 ```python
 import requests
