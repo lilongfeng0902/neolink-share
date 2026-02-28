@@ -64,7 +64,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/chat/completions' \\
 }'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 import requests
@@ -92,7 +92,7 @@ if "choices" in result:
 print("Assistant:", result["choices"][0]["message"]["content"])
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gpt-4.1
 - gpt-5
@@ -126,7 +126,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/messages' \\
 }'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 import requests
@@ -162,7 +162,7 @@ print("Assistant reply:")
 print(reply)
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - claude-sonnet-4-5-20250929
 - claude-opus-4-5-20251101
@@ -192,7 +192,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 注：请求header中默认使用Authorization传递鉴权参数，如：--header 'Authorization: Bearer <API Key>'，如遇到不能识别Authorization参数的情形，可使用x-goog-api-key传递鉴权信息进行处理，如：--header 'x-goog-api-key: <API Key>'。
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 import requests
@@ -224,7 +224,7 @@ print(data )
 注：请求header中默认使用Authorization传递鉴权参数，如 "Authorization": "Bearer <API Key>"，如遇到不能识别Authorization参数的情形，可使用x-goog-api-key传递鉴权信息进行处理，将 "Authorization": "Bearer <API Key>"替换为"x-goog-api-key": "<API Key>"。
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gemini-2.5-flash-image
 - gemini-3-pro-image-preview
@@ -258,7 +258,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
 }'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 import requests
@@ -290,7 +290,7 @@ result = response.json()
 print(result)
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gpt-4.1
 - gpt-5
@@ -322,7 +322,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
 }'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 SQL
@@ -353,7 +353,7 @@ result = response.json()
 print(result)
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gpt-5
 - gpt-5.2
@@ -372,7 +372,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/responses' \\
 }'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 SQL
@@ -394,7 +394,7 @@ result = response.json()
 print(result)
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gpt-5.2-search
 
@@ -429,7 +429,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 }'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 SQL
@@ -466,7 +466,7 @@ result = response.json()
 print(result)
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gemini-3-pro-preview
 
@@ -491,7 +491,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1beta/models/<Model ID
 }'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 SQL
@@ -520,7 +520,7 @@ result = response.json()
 print(result)
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gemini-3-pro-preview-search
 
@@ -565,7 +565,7 @@ fi
 base64 $B64FLAGS "$VIDEO_PATH" > base64.txt
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 import requests
@@ -614,7 +614,7 @@ fi
 base64 $B64FLAGS "$VIDEO_PATH" > base64.txt
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - gemini-3-pro-preview
 - gemini-3-flash-preview
@@ -634,7 +634,7 @@ curl --location --request POST 'http://120.133.40.59/api/v1/videos' \\
 --form 'size="720x1280"'
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 import requests
@@ -658,7 +658,7 @@ print(response.status_code)
 print(response.text)
 ```
 
-1. 支持模型Id
+支持模型Id
 
 - sora-2-guan
 - sora-2-pro-guan
@@ -673,7 +673,7 @@ curl --location --request GET 'http://120.133.40.59/api/v1/videos/<video Id>/con
 --output output.mp4
 ```
 
-1. python编码示例
+2. python编码示例
 
 ```python
 import requests
