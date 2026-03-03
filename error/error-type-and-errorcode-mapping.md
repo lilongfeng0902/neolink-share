@@ -26,7 +26,7 @@ ErrorTypeUpstreamError   = "upstream_error"   // 通用上游错误
 | 4xxx | Client Errors | 客户端错误 |
 | 5xxx | Upstream Errors | 上游服务错误 |
 | 6xxx | Database Errors | 数据库错误 |
-| 7xxx | Quota Errors | 配额错��� |
+| 7xxx | Quota Errors | 配额错误 |
 
 ---
 
